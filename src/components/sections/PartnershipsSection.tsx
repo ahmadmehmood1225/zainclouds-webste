@@ -1,10 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
 import { useT } from "@/lib/use-copy";
 
-const partners = ["Captain Chef", "Code Canyon", "Baba Foods"];
+const partners = [
+  { name: "Captain Chef", logo: "/partnership/captain-chef.png" },
+  { name: "SMLE Guide", logo: "/partnership/smle-guide.webp" },
+  { name: "Code Canyon", logo: "/partnership/code-canyon.png" },
+];
 
 export function PartnershipsSection() {
   const t = useT();
@@ -36,13 +41,23 @@ export function PartnershipsSection() {
           </p>
         </Reveal>
 
-        <ul className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-3 sm:gap-0">
+        <ul className="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-3">
           {partners.map((partner, index) => (
-            <li key={partner} className="min-w-0">
+            <li key={partner.name} className="min-w-0">
               <Reveal delay={index * 80} className="h-full">
-                <div className="flex min-h-36 h-full items-center justify-center border border-white/20 px-6 py-8 text-center transition-colors duration-300 hover:bg-white/10 sm:border-y-0 sm:border-s-0 sm:border-e sm:first:border-s">
-                  <span className="font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                    {partner}
+                <div className="flex h-full min-h-48 flex-col items-center justify-center gap-5 border border-white/20 px-6 py-7 text-center transition-colors duration-300 hover:bg-white/10">
+                  <div className="flex h-24 w-full items-center justify-center bg-white px-5 py-3">
+                    <Image
+                      src={partner.logo}
+                      alt=""
+                      width={200}
+                      height={100}
+                      sizes="(min-width: 1024px) 18vw, (min-width: 640px) 40vw, 80vw"
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <span className="font-display text-xl font-semibold tracking-tight text-white sm:text-2xl">
+                    {partner.name}
                   </span>
                 </div>
               </Reveal>

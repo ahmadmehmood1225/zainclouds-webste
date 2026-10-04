@@ -103,7 +103,7 @@ export function PinnedStory({
       <div className="relative order-2 mt-10 lg:order-none lg:mt-0">
         <div
           className={cn(
-            "relative overflow-hidden rounded-2xl bg-ink-950 ring-1 ring-white/10 lg:sticky lg:top-28",
+            "relative overflow-hidden rounded-2xl bg-brand-700 ring-1 ring-white/10 lg:sticky lg:top-28",
             mediaClassName ?? "h-[22rem] lg:h-[32rem]",
           )}
         >

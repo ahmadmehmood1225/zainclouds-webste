@@ -162,15 +162,12 @@ export function Hero() {
               data-hero-heading
               className="mt-6 font-display text-[2.75rem] leading-[1.08] font-bold tracking-tight text-balance text-white sm:text-6xl lg:text-[4.25rem] xl:text-[4.75rem]"
             >
-              {hero.headline.map((line, index) => (
+              {hero.headline.map((line) => (
                 <span key={line} className="block">
                   <span data-mask className="inline-block overflow-hidden align-bottom">
                     <span
                       data-word
-                      className={cn(
-                        "inline-block -mb-[0.16em] pb-[0.16em]",
-                        index === hero.accentLine && "text-teal-300",
-                      )}
+                      className="inline-block -mb-[0.16em] pb-[0.16em] text-white"
                     >
                       {line}
                     </span>
@@ -229,8 +226,28 @@ export function Hero() {
             </p>
           </div>
 
-          <div data-hero-console className="lg:col-span-7">
+          <div data-hero-console className="relative lg:col-span-7">
             <p className="sr-only">{hero.summary}</p>
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-5 end-[12%] z-10 hidden items-center gap-2 border border-white/20 bg-brand-800/90 px-4 py-2 text-sm text-white shadow-lg motion-safe:animate-[hero-float_4.6s_ease-in-out_infinite] motion-reduce:animate-none lg:inline-flex"
+            >
+              <span aria-hidden="true">🛒</span>
+              <span className="font-mono text-xs tracking-wide text-white/80">order → stock</span>
+            </span>
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute top-[42%] -start-4 z-10 hidden items-center border border-white/20 bg-brand-800/90 px-3 py-2 font-mono text-sm text-white shadow-lg motion-safe:animate-[hero-float_5.2s_ease-in-out_-1.4s_infinite] motion-reduce:animate-none lg:inline-flex"
+            >
+              {"</>"}
+            </span>
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-4 end-[22%] z-10 hidden items-center gap-2 border border-white/20 bg-brand-800/90 px-3 py-2 text-white shadow-lg motion-safe:animate-[hero-float_4.8s_ease-in-out_-2.2s_infinite] motion-reduce:animate-none lg:inline-flex"
+            >
+              <span aria-hidden="true">⚙️</span>
+              <span className="font-mono text-xs text-white/80">if (ready) sync()</span>
+            </span>
             <OperationsEcosystem data={hero.ecosystem} />
             <p
               aria-hidden="true"

@@ -244,12 +244,12 @@ export function ServiceSpotlight({ slug, reverse, otherSlug }: ServiceSpotlightP
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href={primaryHref}
-                className="group inline-flex min-h-12 items-center gap-3 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
+                className="group inline-flex min-h-12 items-center gap-3 rounded-none bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-1 hover:bg-brand-600 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700 motion-reduce:transform-none motion-reduce:transition-none"
               >
                 {t("spotlight.explore", { service: service.name })}
                 <span
                   aria-hidden="true"
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-white/15 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-90"
+                  className="inline-flex h-7 w-7 items-center justify-center rounded-none bg-white/15 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-90 motion-reduce:transition-none"
                 >
                   <ArrowUpRight className="h-4 w-4" />
                 </span>
@@ -257,10 +257,10 @@ export function ServiceSpotlight({ slug, reverse, otherSlug }: ServiceSpotlightP
               {otherService ? (
                 <Link
                   href={otherService.path}
-                  className="inline-flex min-h-12 items-center gap-3 rounded-lg bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700"
+                  className="group inline-flex min-h-12 items-center gap-3 rounded-none bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-1 hover:bg-brand-600 hover:shadow-lg active:translate-y-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-700 motion-reduce:transform-none motion-reduce:transition-none"
                 >
                   {t("spotlight.orExplore", { service: otherService.name })}
-                  <span aria-hidden="true" className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-white/15">
+                  <span aria-hidden="true" className="inline-flex h-7 w-7 items-center justify-center rounded-none bg-white/15 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-90 motion-reduce:transition-none">
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
                 </Link>

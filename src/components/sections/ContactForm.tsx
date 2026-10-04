@@ -336,7 +336,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-brand-500 px-7 text-sm font-medium text-white transition-all duration-200 hover:bg-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
+        className="mt-7 inline-flex h-12 w-full items-center justify-center gap-2 rounded-none bg-brand-500 px-7 text-sm font-medium text-white transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-1 hover:bg-brand-600 hover:shadow-lg active:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-700 disabled:pointer-events-none disabled:opacity-60 motion-reduce:transform-none motion-reduce:transition-none sm:w-auto"
       >
         {status === "submitting" ? t("form.sending") : t("form.send")}
         <ArrowRight className="h-4 w-4 rtl:rotate-180" aria-hidden="true" />

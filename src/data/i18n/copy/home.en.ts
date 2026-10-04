@@ -85,7 +85,7 @@ export const home = {
   "partnerships.label": "Our Partners",
   "partnerships.title": "Our Partnerships with Industry Leaders",
   "partnerships.description":
-    "We work with Captain Chef, Code Canyon and Baba Foods to support the systems and services their teams rely on.",
+    "We work with Captain Chef, SMLE Guide and Code Canyon to support the systems and services their teams rely on.",
 
   "cta.title": "Have A Business Process That Needs Better Software?",
   "cta.body":

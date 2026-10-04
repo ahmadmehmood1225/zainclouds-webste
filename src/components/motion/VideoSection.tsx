@@ -127,7 +127,7 @@ export function VideoSection({
       <div
         ref={wrapRef}
         className={cn(
-          "relative overflow-hidden rounded-2xl bg-ink-950 ring-1 ring-white/10",
+          "relative overflow-hidden rounded-2xl bg-brand-700 ring-1 ring-white/10",
           ratioClassName,
         )}
       >

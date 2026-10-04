@@ -40,7 +40,7 @@ export function TestimonialsSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-ink-950 py-20 text-white sm:py-28"
+      className="relative overflow-hidden bg-brand-700 py-20 text-white sm:py-28"
       aria-labelledby="testimonials-heading"
     >
       <Container>
@@ -173,7 +173,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
       }}
       data-cursor={hasVideo ? "Play" : undefined}
     >
-      <div className="relative aspect-[9/16] overflow-hidden bg-ink-950">
+      <div className="relative aspect-[9/16] overflow-hidden bg-brand-700">
         {/* The poster is a frame from the clip, so the card has an image from the
             first paint without pulling a single byte of video. */}
         {testimonial.poster ? (

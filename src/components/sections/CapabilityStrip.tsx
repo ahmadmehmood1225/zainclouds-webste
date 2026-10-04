@@ -1,8 +1,15 @@
 "use client";
 
 import { Container } from "@/components/ui/Container";
+import Image from "next/image";
 import { useCapabilities } from "@/lib/use-content";
 import { useT } from "@/lib/use-copy";
+
+const partnerLogos = [
+  { name: "Captain Chef", logo: "/partnership/captain-chef.png" },
+  { name: "SMLE Guide", logo: "/partnership/smle-guide.webp" },
+  { name: "Code Canyon", logo: "/partnership/code-canyon.png" },
+];
 
 /**
  * Thin, honest capability strip. It lists the work the company does - no
@@ -34,6 +41,29 @@ export function CapabilityStrip() {
                   {capability}
                 </span>
               </span>
+            ))}
+          </div>
+        </div>
+        <div className="marquee-mask mt-8 overflow-hidden">
+          <div className="animate-marquee flex w-max items-center gap-5 pe-5">
+            {[...partnerLogos, ...partnerLogos].map((partner, index) => (
+              <div
+                key={`${partner.name}-${index}`}
+                aria-hidden={index >= partnerLogos.length}
+                className="flex h-20 w-52 shrink-0 items-center justify-center gap-4 border border-navy-900/10 bg-white px-5"
+              >
+                <Image
+                  src={partner.logo}
+                  alt=""
+                  width={120}
+                  height={60}
+                  sizes="120px"
+                  className="h-12 w-24 object-contain"
+                />
+                <span className="font-display text-sm font-semibold tracking-tight text-navy-900">
+                  {partner.name}
+                </span>
+              </div>
             ))}
           </div>
         </div>

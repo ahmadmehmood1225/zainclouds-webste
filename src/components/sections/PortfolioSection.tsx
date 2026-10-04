@@ -145,7 +145,7 @@ export function PortfolioSection() {
     return (
       <section
         ref={sectionRef}
-        className="relative bg-ink-950 text-white"
+        className="relative bg-brand-700 text-white"
         aria-labelledby="portfolio-heading"
       >
         <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden py-24">

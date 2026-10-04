@@ -231,13 +231,6 @@
   opacity: 0;
 }
 
-/* The headline is gated on opacity, not a CSS transform: GSAP reads a
-   percentage transform as a pixel offset and would keep it after the reveal,
-   leaving the words below their mask. */
-.js [data-hero-heading] [data-word] {
-  opacity: 0;
-}
-
 @keyframes marquee {
   from {
     transform: translateX(0);
@@ -249,6 +242,16 @@
 
 .animate-marquee {
   animation: marquee 40s linear infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 @keyframes zc-record-enter {

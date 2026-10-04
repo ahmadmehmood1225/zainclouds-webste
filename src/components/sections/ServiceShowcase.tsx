@@ -73,7 +73,7 @@ export function ServiceShowcase() {
         <div className="mt-12 items-start gap-10 lg:mt-16 lg:grid lg:grid-cols-[0.95fr_1.05fr]">
           <div role="list" className="divide-y divide-navy-900/10 border-y border-navy-900/10">
             {services.map((service, index) => (
-              <div key={service.slug} role="listitem" className="relative">
+              <div key={service.slug} role="listitem" className="group relative">
                 <button
                   type="button"
                   onClick={() => setActiveIndex(index)}
@@ -129,7 +129,7 @@ export function ServiceShowcase() {
                 <Link
                   href={service.path}
                   aria-label={t("ui.viewDetails", { name: service.name })}
-                  className="absolute end-0 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-navy-900/15 text-navy-800 transition-colors duration-300 hover:border-brand-500 hover:bg-brand-500 hover:text-white"
+                  className="absolute end-3 top-1/2 z-10 inline-flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-none border border-navy-900/15 text-navy-800 transition-[background-color,border-color,color,transform] duration-300 group-hover:-translate-x-0.5 group-hover:border-brand-500 group-hover:bg-white group-hover:text-black hover:-translate-x-0.5 hover:border-brand-500 hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 motion-reduce:transform-none motion-reduce:transition-none"
                 >
                   <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
                 </Link>
@@ -199,12 +199,12 @@ export function ServiceShowcase() {
                 </ul>
                 <Link
                   href={active.path}
-                  className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-green-300 transition-colors hover:text-green-200"
+                  className="group mt-6 inline-flex items-center gap-2 bg-transparent px-3 py-2 text-sm font-medium text-green-300 transition-[background-color,color] duration-300 hover:bg-white hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   {t("ui.viewService")}
                   <span
                     aria-hidden="true"
-                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-green-400/15 transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-90"
+                    className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-green-400/15 transition-[background-color,color,transform] duration-300 group-hover:translate-x-1 group-hover:bg-black/5 group-hover:text-black rtl:rotate-90 motion-reduce:transition-none"
                   >
                     <ArrowUpRight className="h-4 w-4" />
                   </span>
