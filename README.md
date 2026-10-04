@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Zain Clouds OpenCode Website Kit
 
-## Getting Started
+This kit contains:
 
-First, run the development server:
+- `AGENTS.md` — persistent OpenCode project instructions
+- `docs/` — detailed design, animation, media, architecture, SEO and build guidance
+- `.opencode/skills/` — reusable OpenCode skills
+- `opencode.jsonc` — skill permissions
+- `docs/06-zain-clouds-build-prompt.md` — main implementation prompt
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Install into an existing Next.js project
+
+Copy the contents of this kit into the root of your Next.js project.
+
+Expected result:
+
+```text
+your-nextjs-project/
+├── AGENTS.md
+├── opencode.jsonc
+├── docs/
+│   ├── 01-zain-clouds-design-system.md
+│   ├── 02-motion-parallax-standards.md
+│   ├── 03-video-media-standards.md
+│   ├── 04-nextjs-architecture.md
+│   ├── 05-seo-performance-accessibility.md
+│   └── 06-zain-clouds-build-prompt.md
+└── .opencode/
+    └── skills/
+        ├── zain-clouds-frontend/
+        │   └── SKILL.md
+        ├── parallax-motion/
+        │   └── SKILL.md
+        └── service-page-builder/
+            └── SKILL.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+OpenCode discovers project skills from `.opencode/skills`, and project instructions from `AGENTS.md`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Start OpenCode from the project root.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Then paste the contents of:
 
-## Learn More
+`docs/06-zain-clouds-build-prompt.md`
 
-To learn more about Next.js, take a look at the following resources:
+as the first major implementation prompt.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The reference screenshot supplied with the project is a visual benchmark only. Do not copy its proprietary assets, text or exact layout.

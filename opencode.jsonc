@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "permission": {
+    "skill": {
+      "zain-clouds-*": "allow",
+      "parallax-motion": "allow",
+      "service-page-builder": "allow"
+    }
+  }
+}

@@ -1,26 +1,324 @@
 @import "tailwindcss";
 
+/**
+ * Zain Clouds design tokens.
+ *
+ * The palette is built around Zain Clouds blue (#0755E9), white surfaces and
+ * deep blue ink. Legacy token names remain aliases so existing components keep
+ * their meaning while sharing the updated brand.
+ *
+ * The legacy token names (`navy`, `teal`, `green`) are kept as aliases of the new
+ * `ink` and `brand` ramps so the entire component library picks up the new colour
+ * language without any component being rewritten.
+ */
+@theme {
+  /* Typography: Urbanist carries display, navigation, buttons, labels and figures.
+     Open Sans carries body copy and supporting text. */
+  --font-sans: var(--uicore-text-font-family), "Open Sans", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  --font-display: var(--uicore-primary-font-family), "Urbanist", "Open Sans",
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  /* Arabic faces are set separately, see the [dir="rtl"] rules below. */
+  --font-arabic: var(--font-arabic-stack, "Helvetica Neue"), "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+
+  /* White surfaces and deep blue ink. */
+  --color-ink-50: #ffffff;
+  --color-ink-100: #f5f8ff;
+  --color-ink-200: #e5edfb;
+  --color-ink-300: #c6d4ed;
+  --color-ink-400: #91a4c3;
+  --color-ink-500: #637895;
+  --color-ink-600: #485d7c;
+  --color-ink-700: #304765;
+  --color-ink-800: #1c3554;
+  --color-ink-900: #102a4a;
+  --color-ink-950: #071c35;
+
+  /* Primary brand blue and its accessible tonal range. */
+  --color-brand-50: #eff5ff;
+  --color-brand-100: #dce8ff;
+  --color-brand-200: #b9d1ff;
+  --color-brand-300: #8fb3ff;
+  --color-brand-400: #5b8ef5;
+  --color-brand-500: #0755e9;
+  --color-brand-600: #0648c7;
+  --color-brand-700: #073ba2;
+  --color-brand-800: #082e79;
+  --color-brand-900: #092454;
+
+  /* Small service accents, desaturated so they never read as neon. */
+  --color-pink-50: #fbf4f6;
+  --color-pink-100: #f6e3e9;
+  --color-pink-200: #e9c6d1;
+  --color-pink-300: #d79fb2;
+  --color-pink-400: #c07b93;
+  --color-pink-500: #a35d76;
+  --color-pink-600: #874a60;
+  --color-pink-700: #6d3c4e;
+  --color-pink-800: #57313f;
+  --color-pink-900: #432530;
+
+  --color-yellow-50: #fbf8f0;
+  --color-yellow-100: #f5ecd4;
+  --color-yellow-200: #e8d7a4;
+  --color-yellow-300: #d5b970;
+  --color-yellow-400: #bfa049;
+  --color-yellow-500: #a4862f;
+  --color-yellow-600: #866a26;
+  --color-yellow-700: #6a531e;
+  --color-yellow-800: #534119;
+  --color-yellow-900: #3f3114;
+
+  /* Legacy aliases keep existing component classes on the updated blue palette. */
+  --color-navy-50: var(--color-ink-50);
+  --color-navy-100: var(--color-ink-100);
+  --color-navy-200: var(--color-ink-200);
+  --color-navy-300: var(--color-ink-300);
+  --color-navy-400: var(--color-ink-400);
+  --color-navy-500: var(--color-ink-500);
+  --color-navy-600: var(--color-ink-600);
+  --color-navy-700: var(--color-ink-700);
+  --color-navy-800: var(--color-ink-800);
+  --color-navy-900: var(--color-ink-900);
+  --color-navy-950: var(--color-ink-950);
+
+  --color-teal-50: var(--color-brand-50);
+  --color-teal-100: var(--color-brand-100);
+  --color-teal-200: var(--color-brand-200);
+  --color-teal-300: var(--color-brand-300);
+  --color-teal-400: var(--color-brand-400);
+  --color-teal-500: var(--color-brand-500);
+  --color-teal-600: var(--color-brand-600);
+  --color-teal-700: var(--color-brand-700);
+  --color-teal-800: var(--color-brand-800);
+  --color-teal-900: var(--color-brand-900);
+
+  --color-green-50: var(--color-brand-50);
+  --color-green-100: var(--color-brand-100);
+  --color-green-200: var(--color-brand-200);
+  --color-green-300: var(--color-brand-300);
+  --color-green-400: var(--color-brand-400);
+  --color-green-500: var(--color-brand-500);
+  --color-green-600: var(--color-brand-600);
+  --color-green-700: var(--color-brand-700);
+  --color-green-800: var(--color-brand-800);
+  --color-green-900: var(--color-brand-900);
+
+  --color-brand-dark: #071c35;
+  --color-brand-light: #ffffff;
+}
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #102a4a;
+  --header-height: 5rem;
+
+  /* Requested type roles, exposed for the component library. */
+  --uicore-primary-font-family: var(--font-urbanist, "Urbanist");
+  --uicore-secondary-font-family: var(--font-urbanist, "Urbanist");
+  --uicore-accent-font-family: var(--font-urbanist, "Urbanist");
+  --uicore-text-font-family: var(--font-open-sans, "Open Sans");
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Nothing on the site is allowed to push the viewport sideways. */
+    overflow-x: clip;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 1.06;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Arabic needs its own typeface and looser line height to stay readable. */
+  [dir="rtl"] body {
+    font-family: var(--font-arabic);
+    line-height: 1.7;
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5 {
+    font-family: var(--font-arabic);
+    letter-spacing: 0;
+    line-height: 1.28;
+  }
+
+  ::selection {
+    background: var(--color-brand-500);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Media never overflows its frame, whatever the intrinsic size. */
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
+  }
+
+  hr {
+    border-color: color-mix(in srgb, var(--foreground) 12%, transparent);
+  }
+
+  /* Numbers, order ids and currency stay left to right inside Arabic text. */
+  [dir="rtl"] .num,
+  .num {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-variant-numeric: tabular-nums;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Hairline engineering grid, used as a quiet texture on dark surfaces. */
+@utility bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+@utility hairline {
+  border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
+}
+
+.js [data-hero-bg],
+.js [data-hero-eyebrow],
+.js [data-hero-desc],
+.js [data-hero-cta],
+.js [data-hero-locations],
+.js [data-hero-metrics] {
+  opacity: 0;
+}
+
+/* The headline is gated on opacity, not a CSS transform: GSAP reads a
+   percentage transform as a pixel offset and would keep it after the reveal,
+   leaving the words below their mask. */
+.js [data-hero-heading] [data-word] {
+  opacity: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@keyframes zc-record-enter {
+  from {
+    opacity: 0.35;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[dir="rtl"] .animate-marquee {
+  animation-name: marquee-rtl;
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+/* Sync pulse travelling along the hero console connection rail. */
+@keyframes zc-flow {
+  to {
+    stroke-dashoffset: -14;
+  }
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee {
+    animation: none;
+  }
+
+  .js [data-hero-bg],
+  .js [data-hero-eyebrow],
+  .js [data-hero-desc],
+  .js [data-hero-cta],
+  .js [data-hero-locations],
+  .js [data-hero-metrics] {
+    opacity: 1;
+  }
+
+  .js [data-hero-heading] [data-word] {
+    opacity: 1;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
