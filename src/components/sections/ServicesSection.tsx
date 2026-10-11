@@ -44,32 +44,32 @@ export function ServicesSection() {
                 <li className="border-b border-ink-900/10">
                   <Link
                     href={service.path}
-                    className="group flex items-center gap-5 py-6 transition-colors duration-300 hover:bg-white/70 sm:gap-8 sm:py-7"
+                    className="group -mx-4 flex items-center gap-5 px-4 py-6 transition-[background-color,box-shadow] duration-300 ease-out hover:bg-brand-500 hover:shadow-[0_24px_60px_-34px_rgba(7,85,233,0.55)] focus-visible:bg-brand-500 sm:-mx-6 sm:gap-8 sm:px-6 sm:py-7"
                   >
-                    <span className="num w-6 shrink-0 font-display text-xs font-semibold tracking-[0.2em] text-ink-400">
+                    <span className="num w-6 shrink-0 font-display text-xs font-semibold tracking-[0.2em] text-ink-400 transition-colors duration-300 group-hover:text-white/70 group-focus-visible:text-white/70">
                       {String(index + 1).padStart(2, "0")}
                     </span>
 
                     <span
                       className={cn(
                         "inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink-900/12 text-ink-700 transition-colors duration-300",
-                        "group-hover:border-brand-400 group-hover:text-brand-700",
+                        "group-hover:border-white/40 group-hover:text-white group-focus-visible:border-white/40 group-focus-visible:text-white",
                       )}
                     >
                       <Icon className="h-5 w-5" />
                     </span>
 
                     <span className="min-w-0 flex-1">
-                      <span className="block font-display text-lg font-semibold tracking-tight text-ink-900 sm:text-2xl">
+                      <span className="block font-display text-lg font-semibold tracking-tight text-ink-900 transition-colors duration-300 group-hover:text-white group-focus-visible:text-white sm:text-2xl">
                         {service.name}
                       </span>
-                      <span className="mt-1 block max-w-2xl text-sm leading-relaxed text-ink-900/60">
+                      <span className="mt-1 block max-w-2xl text-sm leading-relaxed text-ink-900/60 transition-colors duration-300 group-hover:text-white/80 group-focus-visible:text-white/80">
                         {service.tagline}
                       </span>
                     </span>
 
                     <ArrowUpRight
-                      className="h-5 w-5 shrink-0 text-ink-400 transition-[transform,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-brand-600 rtl:rotate-90"
+                      className="h-5 w-5 shrink-0 text-ink-400 transition-[transform,color] duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-white group-focus-visible:text-white rtl:rotate-90"
                     />
                   </Link>
                 </li>

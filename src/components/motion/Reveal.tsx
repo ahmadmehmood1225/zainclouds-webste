@@ -84,22 +84,23 @@ export function Reveal({
 
     if (prefersReducedMotion()) return;
 
+    const toVars: gsap.TweenVars = {
+      autoAlpha: 1,
+      x: 0,
+      y: 0,
+      scale: 1,
+      duration,
+      ease: easing.steady,
+      delay: delay / 1000,
+      scrollTrigger: { trigger: node, start, once },
+      immediateRender: true,
+    };
+    // `clip` starts fully clipped, so the tween has to explicitly open it back up.
+    // Without this the element stays at inset(0 0 100% 0) and the content never shows.
+    if (variant === "clip") toVars.clipPath = "inset(0% 0% 0% 0%)";
+
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        node,
-        { ...fromState(variant, distance) },
-        {
-          autoAlpha: 1,
-          x: 0,
-          y: 0,
-          scale: 1,
-          duration,
-          ease: easing.steady,
-          delay: delay / 1000,
-          scrollTrigger: { trigger: node, start, once },
-          immediateRender: true,
-        },
-      );
+      gsap.fromTo(node, { ...fromState(variant, distance) }, toVars);
     }, node);
 
     return () => ctx.revert();

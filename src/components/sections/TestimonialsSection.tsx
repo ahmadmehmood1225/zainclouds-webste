@@ -40,7 +40,7 @@ export function TestimonialsSection() {
 
   return (
     <section
-      className="relative overflow-hidden bg-brand-700 py-20 text-white sm:py-28"
+      className="relative overflow-hidden bg-white py-20 text-ink-900 sm:py-28"
       aria-labelledby="testimonials-heading"
     >
       <Container>
@@ -51,11 +51,10 @@ export function TestimonialsSection() {
               label={t("testimonials.label")}
               title={t("testimonials.title")}
               description={t("testimonials.description")}
-              dark
             />
           </Reveal>
           <Reveal delay={120} distance={20}>
-            <p className="max-w-xs text-sm leading-relaxed text-white/45">
+            <p className="max-w-xs text-sm leading-relaxed text-ink-500">
               {t("testimonials.hoverToPlay")}
             </p>
           </Reveal>
@@ -161,7 +160,7 @@ function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
     <article
       className={cn(
         "group flex h-full flex-col overflow-hidden rounded-2xl border transition-colors duration-400",
-        playing ? "border-brand-400/60 bg-ink-900" : "border-white/10 bg-ink-900/50",
+        playing ? "border-brand-500/60 bg-ink-950" : "border-ink-200 bg-ink-950",
       )}
       onPointerEnter={(event) => {
         if (event.pointerType !== "mouse") return;

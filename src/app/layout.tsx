@@ -61,6 +61,11 @@ export const metadata: Metadata = {
     "Dubai software company",
   ],
   category: "technology",
+  icons: {
+    icon: [{ url: "/brand/zain-clouds-favicon.png", type: "image/png" }],
+    shortcut: "/brand/zain-clouds-favicon.png",
+    apple: "/brand/zain-clouds-favicon.png",
+  },
   alternates: {
     canonical: siteConfig.url,
   },

@@ -1,9 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { useT } from "@/lib/use-copy";
-import { LogoMark } from "@/components/brand/Logo";
+
+const logoByVariant = {
+  dark: "/brand/zain-clouds-logo-dark.png",
+  light: "/brand/zain-clouds-logo-light.png",
+} as const;
 
 export function Logo({
   variant = "dark",
@@ -18,18 +23,16 @@ export function Logo({
     <Link
       href="/"
       aria-label={`Zain Clouds — ${t("nav.home")}`}
-      className={cn("inline-flex items-center gap-2.5", className)}
+      className={cn("inline-flex items-center", className)}
     >
-      <LogoMark />
-      <span
-        className={cn(
-          "font-display text-lg font-semibold tracking-tight",
-          variant === "light" ? "text-white" : "text-navy-900",
-        )}
-      >
-        Zain{" "}
-        <span className={variant === "light" ? "text-green-300" : "text-green-600"}>Clouds</span>
-      </span>
+      <Image
+        src={logoByVariant[variant]}
+        alt="Zain Clouds"
+        width={496}
+        height={223}
+        priority
+        className="h-12 w-auto sm:h-14"
+      />
     </Link>
   );
 }
