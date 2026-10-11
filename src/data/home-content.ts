@@ -98,7 +98,7 @@ export const credibilityFacts: CredibilityFact[] = [
   {
     id: "locations",
     title: "Three locations",
-    body: "Offices in Riyadh, Lahore and Dubai with Arabic, Urdu and English speaking teams.",
+    body: "Offices in Jeddah, Multan and Dubai with Arabic, Urdu and English speaking teams.",
   },
   {
     id: "delivery",

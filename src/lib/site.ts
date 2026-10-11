@@ -3,7 +3,8 @@ export const siteConfig = {
   legalName: "Zain Clouds Private Limited",
   tagline: "Software Solutions for Growing Businesses",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://zainclouds.com",
-  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "hello@zainclouds.com",
+  email: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "info@zainclouds.com",
+  phone: "+92-339-2003974",
   defaultTitle: "Zain Clouds | Ecommerce, ERP, CRM and Custom Software Solutions",
   defaultDescription:
     "Zain Clouds builds ecommerce, CRM, ERP, ERPNext, POS and custom software solutions for businesses across Saudi Arabia, Pakistan and the Gulf region.",
@@ -13,10 +14,10 @@ export const siteConfig = {
   backgroundColor: "#0a1e3c",
   themeColor: "#0a1e3c",
   social: {
-    linkedin: "",
-    twitter: "",
-    instagram: "",
-    github: "",
+    facebook: "https://www.facebook.com/ZainClouds3/",
+    instagram: "https://www.instagram.com/zainclouds1/",
+    linkedin: "https://www.linkedin.com/company/zainclouds/posts/?feedView=all",
+    tiktok: "https://www.tiktok.com/@zainclouds",
   },
 };
 

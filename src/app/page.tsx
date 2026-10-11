@@ -9,7 +9,7 @@ import { TechnologySection } from "@/components/sections/TechnologySection";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { PortfolioSection } from "@/components/sections/PortfolioSection";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
-import { LeadershipSection } from "@/components/sections/LeadershipSection";
+import { TeamSection } from "@/components/sections/TeamSection";
 import { CredibilitySection } from "@/components/sections/CredibilitySection";
 import { PartnershipsSection } from "@/components/sections/PartnershipsSection";
 import { CTASection } from "@/components/sections/CTASection";
@@ -56,7 +56,7 @@ export default function HomePage() {
       <StatsSection />
       <PortfolioSection />
       <TestimonialsSection />
-      <LeadershipSection variant="teaser" />
+      <TeamSection />
       <CredibilitySection />
       <PartnershipsSection />
       <FaqSection />

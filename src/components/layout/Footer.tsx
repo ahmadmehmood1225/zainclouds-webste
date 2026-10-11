@@ -11,19 +11,19 @@ import {
   ArrowRight,
   Mail,
   MapPin,
+  Phone,
   Globe,
+  Facebook,
   LinkedIn,
-  Twitter,
   Instagram,
-  Github,
+  TikTok,
 } from "@/components/ui/icons";
 
-// Placeholder socials — fill these with live profile URLs before launch.
 const socialLinks = [
-  { label: "LinkedIn", href: siteConfig.social.linkedin, Icon: LinkedIn },
-  { label: "Twitter", href: siteConfig.social.twitter, Icon: Twitter },
+  { label: "Facebook", href: siteConfig.social.facebook, Icon: Facebook },
   { label: "Instagram", href: siteConfig.social.instagram, Icon: Instagram },
-  { label: "GitHub", href: siteConfig.social.github, Icon: Github },
+  { label: "LinkedIn", href: siteConfig.social.linkedin, Icon: LinkedIn },
+  { label: "TikTok", href: siteConfig.social.tiktok, Icon: TikTok },
 ];
 
 export function Footer() {
@@ -75,6 +75,13 @@ export function Footer() {
               >
                 <Mail className="h-4 w-4" aria-hidden="true" />
                 {siteConfig.email}
+              </a>
+              <a
+                href={`tel:${siteConfig.phone}`}
+                className="flex items-center gap-2 text-navy-200/80 transition-colors hover:text-teal-300"
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {siteConfig.phone}
               </a>
             </div>
             <div className="mt-6 flex gap-3">

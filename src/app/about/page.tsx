@@ -6,7 +6,6 @@ import { CredibilitySection } from "@/components/sections/CredibilitySection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyZainClouds } from "@/components/sections/WhyZainClouds";
 import { TeamSection } from "@/components/sections/TeamSection";
-import { LeadershipSection } from "@/components/sections/LeadershipSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { buildMetadata } from "@/lib/seo";
@@ -33,7 +32,6 @@ export default function AboutPage() {
       <CredibilitySection />
       <ProcessSection />
       <WhyZainClouds />
-      <LeadershipSection />
       <TeamSection />
       <CTASection />
       <ContactSection />

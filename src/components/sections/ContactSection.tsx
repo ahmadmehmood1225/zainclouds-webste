@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
 import { Parallax } from "@/components/motion/Parallax";
-import { MapPin, Mail } from "@/components/ui/icons";
+import { MapPin, Mail, Phone } from "@/components/ui/icons";
 import { siteConfig } from "@/lib/site";
 import { useOffices } from "@/lib/use-content";
 import { useT } from "@/lib/use-copy";
@@ -95,6 +95,20 @@ export function ContactSection() {
                     className="text-sm text-navy-900/60 hover:text-teal-700"
                   >
                     {siteConfig.email}
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-navy-900 text-teal-300">
+                  <Phone className="h-5 w-5" aria-hidden="true" />
+                </span>
+                <div>
+                  <p className="font-medium text-navy-900">{t("form.phone")}</p>
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    className="text-sm text-navy-900/60 hover:text-teal-700"
+                  >
+                    {siteConfig.phone}
                   </a>
                 </div>
               </div>

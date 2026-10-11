@@ -7,13 +7,14 @@ export const arOffices: Record<
 > = {
   "saudi-arabia": {
     title: "المكتب السعودي",
-    area: "الرياض، المملكة العربية السعودية",
+    area:
+      "Salma Commercial Center – 2nd Floor – Room No – 240, Street – AbuBakkar, Ash Sharafiyah District, 2350, Jeddah 23216, Madina Road",
     description:
       "قيادة إقليمية وتنفيذ قريب من احتياجات السوق السعودي، مع دعم كامل للعملاء الناطقين بالعربية.",
   },
   pakistan: {
     title: "مكتب باكستان",
-    area: "لاهور، باكستان",
+    area: "ZainClouds Office, Khanewal Road, Chowk Rasheedabad Flyover, Multan, Pakistan",
     description: "فرق الهندسة والتصميم والتسليم التي تبني البرمجيات خلف كل منتج نصدره.",
   },
   dubai: {

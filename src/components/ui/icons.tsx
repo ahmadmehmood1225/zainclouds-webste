@@ -316,6 +316,22 @@ export function LinkedIn(props: IconProps) {
   );
 }
 
+export function Facebook(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M15 21v-8h3l.5-4H15V7c0-1.2.4-2 2-2h1.7V1.4C18.2 1.2 17.2 1 16 1c-3.2 0-5 1.9-5 5.4V9H8v4h3v8h4Z" />
+    </Base>
+  );
+}
+
+export function TikTok(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M14 3v11.2a4 4 0 1 1-3-3.9V7.2a7.5 7.5 0 1 0 6 7.3V9.1a9 9 0 0 0 4 1V7a5.5 5.5 0 0 1-5.5-4H14Z" />
+    </Base>
+  );
+}
+
 export function Twitter(props: IconProps) {
   return (
     <Base {...props}>

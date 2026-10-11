@@ -3,7 +3,7 @@ export const home = {
   "statement.label": "Our position",
   "statement.title": "We build the software that runs the day-to-day of growing businesses.",
   "statement.body":
-    "Zain Clouds is a software company headquartered in Saudi Arabia with offices in Riyadh, Lahore and Dubai. We design, build and support ecommerce, CRM, ERP, ERPNext, POS and custom software for companies that need systems to work as one.",
+    "Zain Clouds is a software company headquartered in Saudi Arabia with offices in Jeddah, Multan and Dubai. We design, build and support ecommerce, CRM, ERP, ERPNext, POS and custom software for companies that need systems to work as one.",
 
   "capabilities.aria": "Capabilities",
   "capabilities.label": "Software for commerce, operations and growth",
@@ -133,9 +133,8 @@ export const home = {
   "leadership.more": "About the company",
 
   "team.label": "The Team",
-  "team.title": "Disciplines Working As One Delivery Team",
-  "team.description":
-    "Zain Clouds delivers through a small, senior team spanning Saudi Arabia, Pakistan and Dubai. Every engagement is owned end to end by product, engineering and design working together.",
+  "team.title": "Meet Our Team",
+  "team.description": "The people behind the work.",
 
   "about.label": "About Zain Clouds",
   "about.title": "Technology Should Make Business Simpler",
