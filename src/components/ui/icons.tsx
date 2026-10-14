@@ -28,6 +28,15 @@ export function ArrowRight(props: IconProps) {
   );
 }
 
+export function ArrowLeft(props: IconProps) {
+  return (
+    <Base {...props}>
+      <path d="M19 12H5" />
+      <path d="m11 18-6-6 6-6" />
+    </Base>
+  );
+}
+
 export function ArrowUpRight(props: IconProps) {
   return (
     <Base {...props}>

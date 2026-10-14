@@ -130,6 +130,8 @@ export const home = {
   "leadership.description":
     "يقود زين كلاودز من يحدد نطاق العمل ويكتب الكود ويقله إلى الإنتاج. لا توجد طبقة إدارة حسابات تفصلكم عن الفريق الذي يبني نظامكم.",
   "leadership.more": "عن الشركة",
+  "leadership.previous": "أعضاء الفريق السابقون",
+  "leadership.next": "أعضاء الفريق التالون",
 
   "team.label": "الفريق",
   "team.title": "تعرّف على فريقنا",

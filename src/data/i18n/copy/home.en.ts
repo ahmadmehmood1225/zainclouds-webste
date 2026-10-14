@@ -131,6 +131,8 @@ export const home = {
   "leadership.description":
     "Zain Clouds is led by the people who scope the work, write the code and carry it into production. No account management layer between you and the team building your system.",
   "leadership.more": "About the company",
+  "leadership.previous": "Previous team members",
+  "leadership.next": "Next team members",
 
   "team.label": "The Team",
   "team.title": "Meet Our Team",

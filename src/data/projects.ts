@@ -84,6 +84,18 @@ export const projects: Project[] = [
     service: "ecommerce",
   },
   {
+    slug: "your-ears",
+    category: "Healthcare",
+    name: "Your Ears",
+    description:
+      "A doctor appointment booking platform: patients find the right specialist, see live availability and confirm a slot in a few taps, while clinics manage schedules, reminders and patient records from one dashboard.",
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "Notification APIs"],
+    image: "/images/projects/your-ears.webp",
+    region: "Saudi Arabia",
+    result: "Bookings, reminders and clinic schedules run from one system",
+    service: "custom-software",
+  },
+  {
     slug: "drs-lounge",
     category: "POS",
     name: "Dr's Lounge",
@@ -103,21 +115,21 @@ export const projects: Project[] = [
     description:
       "A customer relationship platform built around the way the team actually sells: pipeline, follow up scheduling and performance reporting.",
     technologies: ["Next.js", "Node.js", "PostgreSQL"],
-    image: "/images/projects/mellot.svg",
+    image: "/images/projects/mellot.png",
     region: "Gulf Region",
     result: "Pipeline and follow ups visible to the whole sales team",
     service: "crm",
   },
   {
-    slug: "salon-zc",
+    slug: "pos",
     category: "POS",
-    name: "Salon ZC",
+    name: "POS Point of Sale",
     description:
-      "A salon management system combining point of sale, inventory, staff commissions and multi branch reporting.",
-    technologies: ["Next.js", "PostgreSQL", "Cloud Deployment"],
-    image: "/images/projects/salon-zc.svg",
+      "Zain Clouds' own point of sale for retail floors: fast checkout, barcode scanning, inventory sync, staff and branch management, and end of day reporting that reconciles.",
+    technologies: ["Next.js", "Node.js", "PostgreSQL", "Cloud Deployment"],
+    image: "/images/projects/pos-showcase.png",
     region: "Saudi Arabia",
-    result: "Multi branch reporting from a single source of data",
+    result: "Checkout, inventory and branch reporting from one system",
     service: "pos",
   },
 ];
